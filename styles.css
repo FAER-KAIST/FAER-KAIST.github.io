@@ -12,6 +12,10 @@
   --gold: #c79b48;
   --shadow: 0 20px 60px rgba(18, 23, 21, 0.12);
   --max: 1160px;
+  --person-photo-width: 128px;
+  --person-photo-height: 154px;
+  --person-photo-mobile-width: 96px;
+  --person-photo-mobile-height: 116px;
 }
 
 * {
@@ -20,6 +24,7 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
@@ -29,6 +34,7 @@ body {
   font-family: Inter, "Noto Sans KR", "Segoe UI", Arial, sans-serif;
   line-height: 1.56;
   letter-spacing: 0;
+  overflow-x: hidden;
 }
 
 body.nav-open {
@@ -666,17 +672,17 @@ body.lightbox-open {
 
 .person-card {
   display: grid;
-  grid-template-columns: 94px minmax(0, 1fr);
+  grid-template-columns: var(--person-photo-width) minmax(0, 1fr);
   gap: 18px;
-  min-height: 226px;
-  padding: 22px;
+  min-height: 250px;
+  padding: 24px;
   border: 1px solid var(--line);
   border-radius: 8px;
   background: var(--paper);
 }
 
 .feature-person {
-  min-height: 294px;
+  min-height: 318px;
 }
 
 .alumni-card {
@@ -684,8 +690,8 @@ body.lightbox-open {
 }
 
 .person-photo {
-  width: 94px;
-  height: 112px;
+  width: var(--person-photo-width);
+  height: var(--person-photo-height);
   border-radius: 8px;
   object-fit: cover;
   object-position: center top;
@@ -1100,13 +1106,13 @@ body.lightbox-open {
   }
 
   .person-card {
-    grid-template-columns: 78px minmax(0, 1fr);
+    grid-template-columns: var(--person-photo-mobile-width) minmax(0, 1fr);
     padding: 18px;
   }
 
   .person-photo {
-    width: 78px;
-    height: 96px;
+    width: var(--person-photo-mobile-width);
+    height: var(--person-photo-mobile-height);
   }
 
   .site-footer {
@@ -1118,7 +1124,7 @@ body.lightbox-open {
   }
 }
 
-@media (max-width: 380px) {
+@media (max-width: 480px) {
   .single-line-copy {
     white-space: normal;
   }
