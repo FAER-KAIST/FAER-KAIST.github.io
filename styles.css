@@ -498,7 +498,7 @@ h1 {
 
 .gallery-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 320px));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 640px));
   justify-content: center;
   gap: 18px;
 }
@@ -812,7 +812,7 @@ body.lightbox-open {
 
 .publication-list {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: 1fr;
   gap: 14px;
 }
 

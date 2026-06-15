@@ -9,6 +9,7 @@ This is a static GitHub Pages-ready prototype for the FAER Lab research group si
 - `script.js` controls the mobile menu, publication filter, active nav state, and contact form mailto behavior.
 - `assets/hero-faer.jpg` is the generated website hero image.
 - `assets/gallery/` contains lab gallery images selected by the user; thumbnails open in a lightbox preview.
+- `sitemap.xml` and `robots.txt` help Google Search Console discover the GitHub Pages site.
 
 ## Current Content Notes
 
@@ -37,6 +38,7 @@ This is a static GitHub Pages-ready prototype for the FAER Lab research group si
 - Replace the hero visual by adding images to `assets/` and updating `assets/hero-faer.jpg` in `styles.css`.
 - Replace a member photo by saving the new image in `assets/members/`, then updating that member's `<img src="...">` in `index.html`.
 - After editing, run `git add .`, `git commit -m "Update site content"`, and `git push` from this folder to publish the change.
+- After publishing search-related changes, submit `https://faer-kaist.github.io/sitemap.xml` in Google Search Console.
 - If a custom domain is added later, create a `CNAME` file containing only that domain.
 
 ## References Used For This Draft
